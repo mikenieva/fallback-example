@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     port: 5001,
   },
-  base: "/mike",
+  base: "/app",
   build: {
     outDir: "../wwwroot/client",
     emptyOutDir: true,

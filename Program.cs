@@ -22,8 +22,6 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
-
-
 app.MapGet("api/films", async (BechdelDataService ds, int? page, int? pageSize) =>
 {
   if (ds is null) return Results.Problem("Server Error", statusCode: 500);
@@ -38,7 +36,7 @@ app.MapGet("api/films", async (BechdelDataService ds, int? page, int? pageSize) 
 //   cfg.UseProxyToSpaDevelopmentServer("http://localhost:5000");
 // });
 
-app.MapFallbackToPage("/{*path}", "/Mike");
+app.MapFallbackToPage("/{*path}", "/App");
   
 
 app.Run();
